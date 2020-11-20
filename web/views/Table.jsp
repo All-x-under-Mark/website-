@@ -79,101 +79,25 @@
                     <tbody>
                     <tr>
 
-                        <td>${som.comaList[0].num}</td>
-                        <td>${som.comaList[0].name}</td>
-                        <td>${som.comaList[0].game}</td>
-                        <td>${som.comaList[0].win}</td>
-                        <td>${som.comaList[0].draw}</td>
-                        <td>${som.comaList[0].lost}</td>
-                        <td>${som.comaList[0].goalsScored}</td>
-                        <td>${som.comaList[0].goalsConceded}</td>
-                        <td>${som.comaList[0].difference}</td>
-                        <td>${som.comaList[0].points}</td>
+                        <td>${com.num}</td>
+                        <td>${com.name}</td>
+                        <td>${com.game}</td>
+                        <td>${com.win}</td>
+                        <td>${com.draw}</td>
+                        <td>${com.lost}</td>
+                        <td>${com.goalsScored}</td>
+                        <td>${com.goalsConceded}</td>
+                        <td>${com.difference}</td>
+                        <td>${com.points}</td>
 
                     </tr>
-                    <td>${som.comaList[1].num}</td>
-                    <td>${som.comaList[1].name}</td>
-                    <td>${som.comaList[1].game}</td>
-                    <td>${som.comaList[1].win}</td>
-                    <td>${som.comaList[1].draw}</td>
-                    <td>${som.comaList[1].lost}</td>
-                    <td>${som.comaList[1].goalsScored}</td>
-                    <td>${som.comaList[1].goalsConceded}</td>
-                    <td>${som.comaList[1].difference}</td>
-                    <td>${som.comaList[1].points}</td>
 
-                    </tr>
-                    <tr>
-                        <td>${som.comaList[2].num}</td>
-                        <td>${som.comaList[2].name}</td>
-                        <td>${som.comaList[2].game}</td>
-                        <td>${som.comaList[2].win}</td>
-                        <td>${som.comaList[2].draw}</td>
-                        <td>${som.comaList[2].lost}</td>
-                        <td>${som.comaList[2].goalsScored}</td>
-                        <td>${som.comaList[2].goalsConceded}</td>
-                        <td>${som.comaList[2].difference}</td>
-                        <td>${som.comaList[2].points}</td>
-                    </tr>
-                    <td>${som.comaList[3].num}</td>
-                    <td>${som.comaList[3].name}</td>
-                    <td>${som.comaList[3].game}</td>
-                    <td>${som.comaList[3].win}</td>
-                    <td>${som.comaList[3].draw}</td>
-                    <td>${som.comaList[3].lost}</td>
-                    <td>${som.comaList[3].goalsScored}</td>
-                    <td>${som.comaList[3].goalsConceded}</td>
-                    <td>${som.comaList[3].difference}</td>
-                    <td>${som.comaList[3].points}</td>
-                    <tr>
-                        <td>${som.comaList[4].num}</td>
-                        <td>${som.comaList[4].name}</td>
-                        <td>${som.comaList[4].game}</td>
-                        <td>${som.comaList[4].win}</td>
-                        <td>${som.comaList[4].draw}</td>
-                        <td>${som.comaList[4].lost}</td>
-                        <td>${som.comaList[4].goalsScored}</td>
-                        <td>${som.comaList[4].goalsConceded}</td>
-                        <td>${som.comaList[4].difference}</td>
-                        <td>${som.comaList[4].points}</td>
-                    </tr>
-                    <tr>
-                        <td>${som.comaList[5].num}</td>
-                        <td>${som.comaList[5].name}</td>
-                        <td>${som.comaList[5].game}</td>
-                        <td>${som.comaList[5].win}</td>
-                        <td>${som.comaList[5].draw}</td>
-                        <td>${som.comaList[5].lost}</td>
-                        <td>${som.comaList[5].goalsScored}</td>
-                        <td>${som.comaList[5].goalsConceded}</td>
-                        <td>${som.comaList[5].difference}</td>
-                        <td>${som.comaList[5].points}</td>
-                    </tr>
-                    <tr>
-                        <td>${som.comaList[6].num}</td>
-                        <td>${som.comaList[6].name}</td>
-                        <td>${som.comaList[6].game}</td>
-                        <td>${som.comaList[6].win}</td>
-                        <td>${som.comaList[6].draw}</td>
-                        <td>${som.comaList[6].lost}</td>
-                        <td>${som.comaList[6].goalsScored}</td>
-                        <td>${som.comaList[6].goalsConceded}</td>
-                        <td>${som.comaList[6].difference}</td>
-                        <td>${som.comaList[6].points}</td>
-                    </tr>
-                    <tr>
-                        <td>${som.comaList[7].num}</td>
-                        <td>${som.comaList[7].name}</td>
-                        <td>${som.comaList[7].game}</td>
-                        <td>${som.comaList[7].win}</td>
-                        <td>${som.comaList[7].draw}</td>
-                        <td>${som.comaList[7].lost}</td>
-                        <td>${som.comaList[7].goalsScored}</td>
-                        <td>${som.comaList[7].goalsConceded}</td>
-                        <td>${som.comaList[7].difference}</td>
-                        <td>${som.comaList[7].points}</td>
 
-                    </tr>
+
+
+
+
+
 
                     </tbody>
                 </table>
@@ -185,7 +109,7 @@
                         Dropdown button
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" value = "${som.[1].num}"> Link 1</a>
+                        <a class="dropdown-item" value = "${.[1].num}"> Link 1</a>
                         <a class="dropdown-item" href="#">Link 2</a>
                         <a class="dropdown-item" href="#">Link 3</a>
                     </div>

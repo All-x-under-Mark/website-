@@ -3,14 +3,13 @@ package app.servlets;
 import app.entities.Comand;
 import app.model.Database;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-import static java.lang.System.*;
 
 public class CommandServlet extends HttpServlet {
 
@@ -26,13 +25,13 @@ public class CommandServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        out.println("GET");
 
-        // req.setAttribute("som", sList);
+        Comand comand = database.getCommandList().getCommand(1);
+        req.setAttribute("com", comand);
 
 
-//        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/Table.jsp");
-//        requestDispatcher.forward(req, resp);
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/Table.jsp");
+        requestDispatcher.forward(req, resp);
     }
 
 
@@ -43,7 +42,7 @@ public class CommandServlet extends HttpServlet {
         comand.setName(name);
 
 
-      //  resp.sendRedirect("/Table");
+        resp.sendRedirect("/Table");
 
     }
 }

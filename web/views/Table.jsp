@@ -10,6 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -77,26 +78,21 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
 
-                        <td>${com.num}</td>
-                        <td>${com.name}</td>
-                        <td>${com.game}</td>
-                        <td>${com.win}</td>
-                        <td>${com.draw}</td>
-                        <td>${com.lost}</td>
-                        <td>${com.goalsScored}</td>
-                        <td>${com.goalsConceded}</td>
-                        <td>${com.difference}</td>
-                        <td>${com.points}</td>
-
-                    </tr>
-
-
-
-
-
-
+                    <c:forEach var="com" items="${commands}">
+                        <tr>
+                            <td>${com.num}</td>
+                            <td>${com.name}</td>
+                            <td>${com.game}</td>
+                            <td>${com.win}</td>
+                            <td>${com.draw}</td>
+                            <td>${com.lost}</td>
+                            <td>${com.goalsScored}</td>
+                            <td>${com.goalsConceded}</td>
+                            <td>${com.difference}</td>
+                            <td>${com.points}</td>
+                        </tr>
+                    </c:forEach>
 
 
                     </tbody>

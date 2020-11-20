@@ -2,7 +2,7 @@ package app.entities;
 
 import java.util.Objects;
 
-public class Comand {
+public class Command {
 
     private int num;
     private String name;
@@ -15,12 +15,12 @@ public class Comand {
     private int difference;
     private int points;
 
-    public Comand() {
+    public Command() {
 
     }
 
-    public Comand(int num, String name, int game, int win, int draw, int lost, int goalsScored, int goalsConceded,
-                  int difference, int points) {
+    public Command(int num, String name, int game, int win, int draw, int lost, int goalsScored, int goalsConceded,
+                   int difference, int points) {
         this.num = num;
         this.name = name;
         this.game = game;
@@ -32,6 +32,10 @@ public class Comand {
         this.difference = difference;
         this.points = points;
 
+    }
+
+    public Command(String name) {
+        this.name = name;
     }
 
     public int getNum() {
@@ -117,18 +121,18 @@ public class Comand {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Comand)) return false;
-        Comand comand = (Comand) o;
-        return getNum() == comand.getNum() &&
-                getGame() == comand.getGame() &&
-                getWin() == comand.getWin() &&
-                getDraw() == comand.getDraw() &&
-                getLost() == comand.getLost() &&
-                getGoalsScored() == comand.getGoalsScored() &&
-                getGoalsConceded() == comand.getGoalsConceded() &&
-                getDifference() == comand.getDifference() &&
-                getPoints() == comand.getPoints() &&
-                getName().equals(comand.getName());
+        if (!(o instanceof Command)) return false;
+        Command command = (Command) o;
+        return getNum() == command.getNum() &&
+                getGame() == command.getGame() &&
+                getWin() == command.getWin() &&
+                getDraw() == command.getDraw() &&
+                getLost() == command.getLost() &&
+                getGoalsScored() == command.getGoalsScored() &&
+                getGoalsConceded() == command.getGoalsConceded() &&
+                getDifference() == command.getDifference() &&
+                getPoints() == command.getPoints() &&
+                getName().equals(command.getName());
     }
 
     @Override
@@ -138,7 +142,7 @@ public class Comand {
 
     @Override
     public String toString() {
-        return "Comand{" +
+        return "Command{" +
                 "num=" + num +
                 ", name='" + name + '\'' +
                 ", game=" + game +

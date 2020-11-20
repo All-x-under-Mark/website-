@@ -1,12 +1,5 @@
 package app.model;
 
-import app.entities.Comand;
-
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class Database {
     private static Database instance = new Database();
 

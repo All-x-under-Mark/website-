@@ -22,4 +22,13 @@
         <servlet-name>CommandServlet</servlet-name>
         <url-pattern>/Table</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestSetvlet</servlet-name>
+        <servlet-class>app.servlets.TestSetvlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestSetvlet</servlet-name>
+        <url-pattern>/Test</url-pattern>
+    </servlet-mapping>
 </web-app>

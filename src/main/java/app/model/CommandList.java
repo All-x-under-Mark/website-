@@ -28,7 +28,7 @@ public class CommandList implements Serializable {
                 7, 31, 35, -4, 15));
         commandList.add(new Command(7, "Вимпел Степанівка", 14, 3, 4,
                 7, 19, 32, -13, 13));
-        commandList.add(new Command(7, "Сокол Свічківка", 14, 0, 0,
+        commandList.add(new Command(8, "Сокол Свічківка", 14, 0, 0,
                 14, 3, 75, -72, 0));
 
 

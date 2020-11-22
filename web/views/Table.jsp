@@ -115,7 +115,21 @@
 
             <form method="post">
 
-                <input type="text" id="text" name="text" size="10">
+                <input type="text" placeholder="Имя" id="text1" name="name" size="10">
+
+                <input type="text" placeholder="игры" id="text3" name="game" size="10">
+                <input type="text" placeholder="выиграш" id="text4" name="win" size="10">
+                <p>
+                    <input type="text" placeholder="ничья" id="text5" name="draw" size="10">
+                    <input type="text" placeholder="проиграш" id="text6" name="lost" size="10">
+                    <input type="text" placeholder="голи забитые" id="text7" name="goalsScored" size="10">
+                    <input type="text" placeholder="голы пропущенные" id="text8" name="goalsConceded" size="10">
+                </p>
+                <p>
+                    <input type="text" placeholder="разница" id="text9" name="difference" size="10">
+                    <input type="text" placeholder="очки" id="text10" name="points" size="10">
+                </p>
+
 
                 <input type="submit" id="but" name=" but" value="Button">
 
@@ -128,7 +142,7 @@
                         out.println(request.getAttribute("userName") + " Добавлено</p>");
                     }
                 %>
-                <p> ${userName} </p>
+                <p> ${com[1].name} </p>
                 <div>
 
 

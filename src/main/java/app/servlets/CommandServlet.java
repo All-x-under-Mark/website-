@@ -39,8 +39,24 @@ public class CommandServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        String name = req.getParameter("text");
-        Command command = new Command(name);
+        String name = req.getParameter("name");
+
+        //  int num = Integer.parseInt(req.getParameter("num"));
+        int n = database.getCommandList().getAllCommands().size();
+        n++;
+        int num = n++;
+
+        int game = Integer.parseInt(req.getParameter("game"));
+        int win = Integer.parseInt(req.getParameter("win"));
+        int draw = Integer.parseInt(req.getParameter("draw"));
+        int lost = Integer.parseInt(req.getParameter("lost"));
+        int goalsScored = Integer.parseInt(req.getParameter("goalsScored"));
+        int goalsConceded = Integer.parseInt(req.getParameter("goalsConceded"));
+        int difference = Integer.parseInt(req.getParameter("difference"));
+        int points = Integer.parseInt(req.getParameter("points"));
+
+        Command command = new Command(num, name, game, win, draw, lost, goalsScored, goalsConceded,
+                difference, points);
         database.getCommandList().addCommand(command);
 
 

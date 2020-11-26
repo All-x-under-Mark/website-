@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CommandList implements Serializable {
 
-    private List<Command> commandList = new ArrayList();
+    private final List<Command> commandList = new ArrayList();
 
 
     public CommandList() {
@@ -34,18 +34,25 @@ public class CommandList implements Serializable {
 
     }
 
-   public List<Command> getAllCommands() {
+    public List<Command> getAllCommands() {
         return commandList;
-   }
-
-   public void addCommand(Command command) {
-        commandList.add(command);
-   }
-
-
-
-    public Command getCommand(int index) {
-        return commandList.get(index);
     }
+
+    public void addCommand(Command command) {
+        commandList.add(command);
+    }
+
+    public Command getCommand(String nameCommand) {
+        for (Command command : commandList) {
+            if (command.getName().equals(nameCommand)) {
+                return command;
+
+            }
+
+
+        }
+        return null;
+    }
+
 
 }

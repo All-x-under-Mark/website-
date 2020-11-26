@@ -25,6 +25,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>CarServlet</servlet-name>
+        <servlet-class>app.servlets.CarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarServlet</servlet-name>
+        <url-pattern>/Car</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommandUpdateServlet</servlet-name>
+        <servlet-class>app.servlets.CommandUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandUpdateServlet</servlet-name>
+        <url-pattern>/CommandUpdate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>TestSetvlet</servlet-name>
         <servlet-class>app.servlets.TestSetvlet</servlet-class>
     </servlet>

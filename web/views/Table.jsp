@@ -112,22 +112,26 @@
                 </div>
 
             </article>--%>
+            <div>
+                <h1>${error}</h1>
 
-            <form method="post">
+            </div>
+
+            <form method="post" action="/Table">
 
                 <input type="text" placeholder="Имя" id="text1" name="name" size="10">
 
                 <input type="text" placeholder="игры" id="text3" name="game" size="10">
                 <input type="text" placeholder="выиграш" id="text4" name="win" size="10">
-                <p>
-                    <input type="text" placeholder="ничья" id="text5" name="draw" size="10">
-                    <input type="text" placeholder="проиграш" id="text6" name="lost" size="10">
+
+                <input type="text" placeholder="ничья" id="text5" name="draw" size="10">
+                <p><input type="text" placeholder="проиграш" id="text6" name="lost" size="10">
                     <input type="text" placeholder="голи забитые" id="text7" name="goalsScored" size="10">
                     <input type="text" placeholder="голы пропущенные" id="text8" name="goalsConceded" size="10">
-                </p>
-                <p>
+
                     <input type="text" placeholder="разница" id="text9" name="difference" size="10">
-                    <input type="text" placeholder="очки" id="text10" name="points" size="10">
+                </p>
+                <p><input type="text" placeholder="очки" id="text10" name="points" size="10">
                 </p>
 
 
@@ -136,18 +140,40 @@
 
             </form>
 
-            <div>
-                <%
-                    if (request.getAttribute("userName") != null) {
-                        out.println(request.getAttribute("userName") + " Добавлено</p>");
-                    }
-                %>
-                <p> ${com[1].name} </p>
-                <div>
+
+            <form method="post" action="/Car">
+                <label for="cars">Что то выбрать :</label>
+                <select name="cars" id="cars">
+                    <option id="volvo" name="volvo" value="volvo">Volvo</option>
+                    <option id="saab" name="saab" value="saab">Saab</option>
+                    <option id="opel" name="opel" value="opel">Opel</option>
+                    <option id="audi" name="audi" value="audi">Audi</option>
+                </select>
+                <br><br>
+                <input type="submit" id="but1" name="but1" value="Submit">
+            </form>
+
+            <br><br>
+
+            <form method="post" action="/CommandUpdate">
+                <select name="command1" id="command1">
+                    <c:forEach var="command" items="${commands}">
+                        <option>${command.name}</option>
+                    </c:forEach>
+                </select>
+                <input type="text" name="score1">
 
 
-                </div>
-            </div>
+                <select name="command2" id="command2">
+                    <c:forEach var="command" items="${commands}">
+                        <option>${command.name}</option>
+                    </c:forEach>
+                </select>
+                <br><br>
+                <input type="submit" id="but2" name="but2" value="Submit">
+
+            </form>
+
         </div>
 
         <footer>

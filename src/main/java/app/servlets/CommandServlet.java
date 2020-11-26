@@ -29,39 +29,65 @@ public class CommandServlet extends HttpServlet {
 
         List<Command> allCommands = database.getCommandList().getAllCommands();
         req.setAttribute("commands", allCommands);
+        String error = req.getParameter("error");
 
-
+          req.setAttribute("error", error);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/Table.jsp");
         requestDispatcher.forward(req, resp);
     }
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.setCharacterEncoding("UTF-8");
-        String name = req.getParameter("name");
+        String error = null;
+        boolean isValid = false;
+        String name = "";
+        int game = 0;
+        int win = 0;
+        int draw = 0;
+        int lost = 0;
+        int goalsScored = 0;
+        int goalsConceded = 0;
+        int difference = 0;
+        int points = 0;
 
-        //  int num = Integer.parseInt(req.getParameter("num"));
-        int n = database.getCommandList().getAllCommands().size();
-        n++;
-        int num = n++;
+        try {
+            name = req.getParameter("name");
+            game = Integer.parseInt(req.getParameter("game"));
+            win = Integer.parseInt(req.getParameter("win"));
+            draw = Integer.parseInt(req.getParameter("draw"));
+            lost = Integer.parseInt(req.getParameter("lost"));
+            goalsScored = Integer.parseInt(req.getParameter("goalsScored"));
+            goalsConceded = Integer.parseInt(req.getParameter("goalsConceded"));
+            difference = Integer.parseInt(req.getParameter("difference"));
+            points = Integer.parseInt(req.getParameter("points"));
+            isValid = true;
 
-        int game = Integer.parseInt(req.getParameter("game"));
-        int win = Integer.parseInt(req.getParameter("win"));
-        int draw = Integer.parseInt(req.getParameter("draw"));
-        int lost = Integer.parseInt(req.getParameter("lost"));
-        int goalsScored = Integer.parseInt(req.getParameter("goalsScored"));
-        int goalsConceded = Integer.parseInt(req.getParameter("goalsConceded"));
-        int difference = Integer.parseInt(req.getParameter("difference"));
-        int points = Integer.parseInt(req.getParameter("points"));
-
-        Command command = new Command(num, name, game, win, draw, lost, goalsScored, goalsConceded,
-                difference, points);
-        database.getCommandList().addCommand(command);
+        } catch (NumberFormatException e) {
+            error = "ne vse polya zapolneny";
 
 
-        resp.sendRedirect("/Table");
+        }
 
 
+        if (isValid) {
+            int n = database.getCommandList().getAllCommands().size();
+            n++;
+            int num = n++;
+
+
+            Command command = new Command(num, name, game, win, draw, lost, goalsScored, goalsConceded,
+                    difference, points);
+            database.getCommandList().addCommand(command);
+
+        }
+
+        if (isValid) {
+            resp.sendRedirect("/Table");
+        } else {
+
+            resp.sendRedirect("/Table?error=" + error);
+        }
     }
 }

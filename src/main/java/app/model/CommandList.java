@@ -4,6 +4,8 @@ import app.entities.Command;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class CommandList implements Serializable {
@@ -52,6 +54,13 @@ public class CommandList implements Serializable {
 
         }
         return null;
+    }
+
+    public List<Command> sortedCommandList(){
+
+        commandList.sort(Comparator.comparing(Command::getPoints));
+        Collections.reverse(commandList);
+        return commandList;
     }
 
 

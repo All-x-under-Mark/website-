@@ -32,8 +32,10 @@ public class CarServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
 
 
-        String cars = req.getParameter("cars");
-        String items = req.getParameter("item");
+        String command1 = req.getParameter("command1");
+        String command2 = req.getParameter("command2");
+        int score1 = Integer.parseInt(req.getParameter("score1"));
+        int score2 = Integer.parseInt(req.getParameter("score2"));
 
 
         resp.sendRedirect("/Table");

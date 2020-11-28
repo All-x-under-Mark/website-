@@ -161,7 +161,9 @@
                         <option>${command.name}</option>
                     </c:forEach>
                 </select>
-                <input type="text" name="score1">
+                <input class="textScorer" type="text" size="2" name="score1">
+                <b>:</b>
+                <input class="textScorer" type="text" size="2" name="score2">
 
 
                 <select name="command2" id="command2">

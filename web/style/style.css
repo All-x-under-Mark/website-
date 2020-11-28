@@ -41,7 +41,7 @@ input {
     padding: 5px;
     left: 5px;
     border: bisque;
-    width: 180px;
+    width: 100px;
 }
 
 button {
@@ -158,4 +158,11 @@ ul.menu li span {
 
 ul.menu li.current {
     background: #f9f2e2 url(/res/img/menu-gradient.png) repeat-y; /* Градиент */
+}
+
+/* ширина поля ввода в Table.jsp для текстовых полей ввода счета
+
+*/
+.textScorer {
+    width : 20px;
 }
